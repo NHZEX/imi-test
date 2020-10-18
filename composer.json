@@ -1,10 +1,15 @@
 {
-    "name": "imiphp/project-http",
+    "name": "php/imi-test",
     "type": "project",
-    "description": "imi 框架的 Http Server 项目。https://imiphp.com",
+    "description": "imi test",
     "require": {
         "php": "^7.4",
         "yurunsoft/imi": "~1.0",
+        "symfony/polyfill-php74": "^1.18",
+        "symfony/polyfill-php80": "^1.18",
+        "symfony/var-dumper": "^5.1"
+    },
+    "require-dev": {
         "swoole/ide-helper": "^4.5"
     },
     "autoload": {
