@@ -6,7 +6,8 @@
         "php": "^7.4",
         "yurunsoft/imi": "~1.0",
         "symfony/polyfill-php80": "^1",
-        "symfony/polyfill-php81": "^1"
+        "symfony/polyfill-php81": "^1",
+        "topthink/think-orm": "^2.0.38"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",
