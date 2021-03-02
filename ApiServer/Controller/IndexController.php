@@ -2,10 +2,11 @@
 namespace ImiApp\ApiServer\Controller;
 
 use Imi\Controller\HttpController;
-use Imi\Server\View\Annotation\View;
-use Imi\Server\Route\Annotation\Route;
 use Imi\Server\Route\Annotation\Action;
 use Imi\Server\Route\Annotation\Controller;
+use Imi\Server\Route\Annotation\Route;
+use Imi\Server\View\Annotation\View;
+use ImiApp\Extend\Think\Orm\DbManager;
 
 /**
  * @Controller("/")
@@ -38,6 +39,20 @@ class IndexController extends HttpController
             'hello' =>  'imi',
             'time'  =>  date('Y-m-d H:i:s', time()),
         ];
+    }
+
+    /**
+     * @Action
+     * @return array
+     */
+    public function test()
+    {
+        $result[] = DbManager::getIns()->query('SELECT FLOOR(RAND() * 10000) ');
+        $result[] = DbManager::getIns()->query('SELECT FLOOR(RAND() * 10000) ');
+        $result[] = DbManager::getIns()->query('SELECT FLOOR(RAND() * 10000) ');
+        $result[] = DbManager::getIns()->query('SELECT FLOOR(RAND() * 10000) ');
+
+        return $result;
     }
 
 }
